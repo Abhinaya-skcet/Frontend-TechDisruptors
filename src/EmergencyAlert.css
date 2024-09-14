@@ -1,0 +1,168 @@
+/* Container styling for the emergency alert */
+.emergency-alert-container {
+  margin-top:30px;
+  padding: 40px;
+  background-color: inherit;
+  color: inherit;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* Styling for the table of alerts */
+.alert-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove gaps between borders */
+  table-layout: fixed; /* Ensure columns have equal width */
+}
+
+/* Style for both table headers and table cells */
+.alert-table th, .alert-table td {
+  padding: 15px; /* Add space inside cells */
+  border: 1px solid #ddd; /* Border for each cell */
+  text-align: center; /* Center align the content */
+  word-wrap: break-word; /* Prevent text overflow */
+}
+
+/* Styling for table headers */
+.alert-table th {
+   /* Light background for headers */
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Styling for table cells */
+.alert-table td {
+  background-color: inherit; /* Match table background */
+  color: inherit;
+}
+
+/* Image size adjustment within the table */
+.alert-image {
+  max-width: 100px; /* Reduce image size */
+  max-height: 100px;
+  object-fit: cover; /* Ensure the image is contained within the size */
+}
+
+/* Container for the table */
+.alert-table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Handle overflow for small screens */
+}
+
+/* Flashing alert banner styling */
+.flashing-alert {
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  animation: flash 1s infinite;
+  margin-top: 30px;
+}
+
+/* Keyframes for flashing animation */
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Map section styling */
+.map-section {
+  margin-top: 40px;
+  height: 500px;
+}
+
+.map-section h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+/* Blinking icon for map markers */
+.blinking-icon {
+  background: radial-gradient(circle, red 50%, transparent 70%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Keyframes for blinking animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Toggle button container */
+.toggle-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Toggle button styling */
+.toggle-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db; /* Primary color */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for toggle buttons */
+.toggle-buttons button:hover {
+  background-color: #da2e22; /* Darker shade for hover effect */
+}
+
+/* Active state for toggle buttons */
+.toggle-buttons button:active {
+  transform: scale(0.95); /* Slightly scales down the button on click */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .alert-table th, .alert-table td {
+    font-size: 0.9rem; /* Reduce text size on smaller screens */
+    padding: 10px; /* Smaller padding */
+  }
+}
+/* Positioning the live button container at the top left */
+.live-button-container {
+  position: fixed; /* Fixes the button relative to the viewport */
+  top: 60px; /* Adjust top value according to the height of your app bar */
+  left: 20px; /* Space from the left edge */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Styling for the live button */
+.live-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white; /* Text color */
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  border-radius: 0; /* Remove border radius if you want sharp corners */
+  cursor: pointer;
+  text-align: center; /* Center align text */
+  box-shadow: none; /* Remove any box shadow */
+}
+
+
