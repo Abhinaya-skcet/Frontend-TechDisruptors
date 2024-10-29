@@ -108,7 +108,7 @@ const EmergencyAlert = () => {
       {/* "Live" Button Below the AppBar */}
       <div className="live-button-container">
         <button onClick={() => setShowVideo(!showVideo)} className="live-button">
-          {showVideo ? '🔴 Live ' : '🔴 Live '}
+          {showVideo ? '🔴 Live(Hide) ' : '🔴 Live'}
         </button>
       </div>
 
